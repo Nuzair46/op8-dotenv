@@ -1,0 +1,16 @@
+diff --git a/drivers/input/touchscreen/oplus_touchscreen/Samsung/S6SY771/sec_drivers_s6sy771.c b/drivers/input/touchscreen/oplus_touchscreen/Samsung/S6SY771/sec_drivers_s6sy771.c
+index c37b61f04..f312489f1 100644
+--- a/drivers/input/touchscreen/oplus_touchscreen/Samsung/S6SY771/sec_drivers_s6sy771.c
++++ b/drivers/input/touchscreen/oplus_touchscreen/Samsung/S6SY771/sec_drivers_s6sy771.c
+@@ -4090,6 +4090,11 @@ static int sec_tp_probe(struct i2c_client *client,
+ 		goto err_register_driver;
+ 	}
+ 	ts->tp_suspend_order = TP_LCD_SUSPEND;
++	/* Temporary diagnostic: preserve this replacement panel across resume. */
++	if (ts->panel_data.TP_FW == 0x17870131) {
++		ts->skip_reset_in_resume = true;
++		TPD_INFO("replacement panel test: skip controller reset on resume\n");
++	}
+ 	chip_info->auto_test_need_cal_support = of_property_read_bool(
+ 		ts->dev->of_node, "auto_test_need_cal_support");
+ 

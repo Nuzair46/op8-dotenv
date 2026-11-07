@@ -1,0 +1,13 @@
+The MIT license covers original tools and documentation in this repository.
+
+patches/touch-s6sy771-resume.patch modifies the GPL-2.0 Linux kernel source
+maintained by LineageOS and its upstream contributors. The patch is provided
+under GPL-2.0-only, consistent with that source. Existing source copyrights
+remain with their respective holders. Full corresponding base source and
+license:
+https://github.com/LineageOS/android_kernel_oneplus_sm8250/tree/98a7970af93b7e01ee77156e7fa0eb7e059a57f0
+https://github.com/LineageOS/android_kernel_oneplus_sm8250/blob/98a7970af93b7e01ee77156e7fa0eb7e059a57f0/COPYING
+
+No kernel binary or vendor binary is distributed here. Patch recipes describe
+changes to user-supplied vendor files; no license to those files is granted.
+Product and company names belong to their respective owners.

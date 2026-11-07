@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "name": "oneplus-camera-jpeg-null-guard",
+  "target": "/vendor/lib64/libAlgoProcess.so",
+  "experimental_biometric": false,
+  "original_sha256": "d2493a45df26b9a3e99c3ad5c49372384e5287d921a301cae69b09605d137907",
+  "patched_sha256": "517ed651cda6cd3f480d503233214dbcb2f99fecd47386b04f33685c1de9fc25",
+  "edits": [
+    {"offset": "0xfa188", "before": "884f40392803203655f9ffb0b5120e91e1058052", "after": "a80100f008bd45f9080140f9e80600b416000014"},
+    {"offset": "0xfb618", "before": "884f4039", "after": "dcfaff17"}
+  ]
+}

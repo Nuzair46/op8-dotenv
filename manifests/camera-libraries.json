@@ -1,0 +1,247 @@
+{
+    "schema_version":  1,
+    "purpose":  "Observed camera library inventory, not an automatic installation plan",
+    "tested_rom":  "24.0-20261103-NIGHTLY-instantnoodle",
+    "stock_source":  "IN2015_13.1.0.593(EX01)",
+    "owner":  "root:root",
+    "file_mode":  "0644",
+    "installed_selinux_label":  "u:object_r:same_process_hal_file:s0",
+    "label_only_original_label":  "u:object_r:vendor_file:s0",
+    "files":  [
+                  {
+                      "path":  "/vendor/lib64/libAlgoProcess.so",
+                      "action":  "add_patched",
+                      "source":  "OxygenOS",
+                      "source_sha256":  "d2493a45df26b9a3e99c3ad5c49372384e5287d921a301cae69b09605d137907",
+                      "installed_sha256":  "517ed651cda6cd3f480d503233214dbcb2f99fecd47386b04f33685c1de9fc25"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libapsjpeg.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "1f6a06d27bec6afb858db91468a969a0940f12560b1ac01d94edf384975113d0"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libapsexif.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "9fd964a747b6ba40a03e17c998b6b92ace0e2d519976655e7b533a028614688d"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libPolarrRender.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "db852466e125f965f300ab385eec242357e9b13c05c8c5418282c7c0018440b0"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libmpbase.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "a1391e697699e2a87d9d46dc91589fe64521d08b4079f6643d6ed71ba5e01144"
+                  },
+                  {
+                      "path":  "/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "5ce1c0ba2bdfedaccae90ded11e718329e683ac417e431589e7b354379e5d9a4"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libstdc++.so",
+                      "action":  "add",
+                      "source":  "/system/lib64/libstdc++.so from installed LineageOS",
+                      "installed_sha256":  "b5140486c06bbbcf744e97f1937b78ee91333484c2cd462b2f5f55363e722598"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libSNPE.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "96c21bf93895afb1ba62416c4b7341439aeec679bfd81567bf8464ec5b5758fb"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libSuperSensor.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "8ac6f681a0bb8af878ef7818086efb91ca6feb9102890cab90dd921416161080"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libSuperSensorFallback.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "3bab3bfbbe82204332ed16f7e3cf5c8d3af374092748a4c0de4548df567f6210"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libSuperSensorProcessor.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "72d8c9dcff993486d190d075001f99a6d93a0c4ae44c581cb9ab9e7d7d2f50f0"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libSuperSensorProcessorCWrapper.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "f1d83f832feab1ff2069bd1b20b8deb54fcd1828c3fd86dcbc30c7bf95c50822"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libVDBlurless.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "cbc441b32a004980b4a1cda36e6cdb10daca41df0a75e077fa00375dc9aa14c4"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libVDSuperPhotoAPI.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "9addf7139e2dddf7479a0167be1dbf69fa8aaf6f671cf6783dcb2b803c56cb7f"
+                  },
+                  {
+                      "path":  "/vendor/lib64/lib_oneplus_vivideffect.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "44884baf2cc12039eae4c02a31451283a4ab1518137281345536f91ff3059213"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libalCFRLV_dsp.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "72d6ade06e83d911ac867a581c83009ec95220d38b2c023982ecac889e6bee50"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libapsdarksight.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "c95e9a5da11fe24e612ff9d7c0587ff3b0298ce13203e3d08f00097146459f7c"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_beautyshot.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "088d7f6e3b1fd066bf821476365579dbb5face14c6e677389c1dabe63de407a7"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_dualcam_bokeh_api.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "b231de61d4130764d1c825da7cb49098734705e6bb70afba2e123d4beab80e02"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_hdr_denoise_api.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "e8afaab0c280804e0f8d3637a829d954e1db64e0929d1bdb884bb073b6317e78"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_low_light_hdr.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "e1767df93ddf6a4310a20bd2e95d3f16530a6075a11a0151be56e2db45ba2218"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_portrait_distortion_correction.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "acaf6e9621145e1b12428a054759934c269e64ac6ae8a88087239b0bb860ea83"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_stripe_removal.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "e78d3814b0020e9e3b81a8745190e148555bdde1530578c71fca677e681dfc91"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_super_night_raw.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "4ac88b369c9af3e7f78fd296d418c62109f3f0853fe4664371c052b7d5558227"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_superportrait.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "90923caab5650ce6c1abb7cc351f2bc57cf07218d66169ee56d196661d3793f8"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libc++_shared.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "cbf48c05fd429d280da9947a3e59623bc2918a4522e47335330b3fac8bc4c4e1"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libdualcam_optical_zoom_control.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "f2131152623efb447718c4e2a4dd99c020c2e15d7863a01db2f7aa4b3ad26b91"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libmorpho_image_refiner_deflicker.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "62992b87f444266b8c1d48b61ff46f2b912e4b6e3a8aedc3cf1db167cb6faaa6"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libsymphony-cpu.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "42af709f7e21aae6611142feed95abbc4a8a1bf0791208a1b9648a53c162f8fb"
+                  },
+                  {
+                      "path":  "/odm/lib64/hta_lib/libhta_hexagon_runtime.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "5bab4c4a8c47570489389a3af2b039fe2771c142f152fa2e95817ac777f815b8"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_high_dynamic_range.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "60a9409b709e0384d99fc3541a6f7546d27cdcf0102823bde25734ee0bf67beb"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_smart_denoise.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "42d2e74efedcfa330bba44d3605ef47fefe65cd7440e4cd12f51103982312aaa"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_hdrplus_hvx_stub.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "7829be1108daf4726c3058fd9151b8b5ad2a815c9780cde8e63956eec5f4ed07"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_hta.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "b7e0bae34deecb610aee00e528fd6fb809fc841e6f5ae7f0a2721b4a1ade8ff8"
+                  },
+                  {
+                      "path":  "/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "7a30bd8202d82d32d229c2471804509181219bb35eb5d4efd0e41d913634d108"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libaps_frame_registration.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "eb628e48fb1679819aed0f6b012192c80556e2119685997caaf66ec598b10308"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libVDDualCameraBlurlessAPI.so",
+                      "action":  "add",
+                      "source":  "OxygenOS",
+                      "installed_sha256":  "a347eb4a138f0f5d09f6befcc21b319b7563b2bc0da8d46d06102ce036d73500"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_hdr_couple_api.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "e270d892346e3aa14a7531f6cc687aa1e521a8ba489b43f6ed88859afee325d8"
+                  },
+                  {
+                      "path":  "/vendor/lib64/libarcsoft_high_dynamic_range_couple.so",
+                      "action":  "label_only",
+                      "source":  "existing LineageOS file",
+                      "installed_sha256":  "c59dc30a9bb10f4e5c5cc7540c7170f8fd882cbc0385f10a2297ad00ea597577"
+                  }
+              ]
+}

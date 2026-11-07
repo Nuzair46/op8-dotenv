@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "goodix-experimental-calibration-ready-gate-bypass",
+  "target": "/odm/lib64/libgf_hal_G6_oplus.so",
+  "experimental_biometric": true,
+  "original_sha256": "431691245476de1c9c6084580e3ec4f86a624ad3c9af94176c7d151d9b3c5d0c",
+  "patched_sha256": "ccb005dcd89635f2e215445884d17401ab9798474ab4ac267021ade539f4ff26",
+  "edits": [
+    {"offset": "0x29dcc", "before": "81000054", "after": "1f2003d5"}
+  ]
+}

@@ -1,6 +1,6 @@
 # OnePlus 8 / LineageOS experiments
 
-Source patches, guarded local patch tools, and reproducible notes from a OnePlus 8 repair and camera-port experiment. **This is not a ROM, a firmware bundle, or a universal installer.** No proprietary binaries or device backups are included.
+Source patches, guarded local patch tools, a native monochrome launcher, and reproducible notes from a OnePlus 8 repair and camera-port experiment. **This is not a ROM, a firmware bundle, or a universal installer.** No proprietary binaries or device backups are included.
 
 Tested on one **OnePlus 8 IN2015 (`instantnoodle`)**, with a replacement AMOLED screen and the original fingerprint sensor, running **LineageOS 24.0 `20261103-NIGHTLY-instantnoodle`**. Stock camera files came from **OxygenOS `IN2015_13.1.0.593(EX01)`**. Findings recorded on 2026-11-08; other devices, builds, and replacement panels are untested.
 
@@ -11,9 +11,11 @@ Tested on one **OnePlus 8 IN2015 (`instantnoodle`)**, with a replacement AMOLED 
 | Fingerprint | Enrollment and unlock worked after reboot; tested unenrolled finger was rejected | **Experimental calibration-ready gate bypass. Calibration remains broken; security is not validated.** |
 | OnePlus Camera | Default for ordinary still-camera launch; tested captures saved | Original 5.9.84 app with processing dependencies and a JPEG crash guard |
 | True 48 MP | **Unsupported** | 8000 x 6000 stream configuration failed; investigation stopped without a 48 MP fix |
+| CustomPhone 0.1.5 | Minimal Home, swipe-up app drawer, borderless dock, monochrome theme and neural live wallpaper | [Source/build/setup](launcher/README.md); no app removal or performance tuning |
 
 Start with the relevant guide:
 
+- [CustomPhone launcher, theme, and wallpaper](launcher/README.md)
 - [Scope, prerequisites, and recovery](docs/setup.md)
 - [Touch resume source patch](docs/touch.md)
 - [Adaptive brightness setting](docs/brightness.md)

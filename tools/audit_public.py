@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Audit a text-only release tree. Does not contact GitHub or upload anything."""
+"""Audit reviewed text and pinned generated artwork. Never uploads anything."""
 
 import argparse
+import hashlib
+import json
 from pathlib import Path, PurePosixPath
 import re
 import sys
@@ -41,10 +43,38 @@ def listed_files(root):
     return set(names)
 
 
+def reviewed_assets(root, allowed):
+    manifest = root / "PUBLIC_ASSETS.json"
+    if not manifest.exists():
+        return {}
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    if "PUBLIC_ASSETS.json" not in allowed or not isinstance(data, dict) or data.get("schema_version") != 1:
+        raise ValueError("Invalid artwork manifest")
+    entries = data.get("files")
+    if not isinstance(entries, list):
+        raise ValueError("Artwork manifest must list files")
+    result = {}
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise ValueError("Invalid artwork entry")
+        name, kind = entry.get("path"), entry.get("kind")
+        if not isinstance(name, str) or name not in allowed or name in result or kind not in ("png", "mp4"):
+            raise ValueError("Unreviewed or duplicate artwork path/type")
+        if PurePosixPath(name).suffix != "." + kind:
+            raise ValueError("Artwork file extension does not match its type")
+        if type(entry.get("size")) is not int or not 0 < entry["size"] <= 20 * 1024 * 1024:
+            raise ValueError("Invalid artwork size")
+        if not isinstance(entry.get("sha256"), str) or not re.fullmatch(r"[0-9a-f]{64}", entry["sha256"]):
+            raise ValueError("Invalid artwork SHA-256")
+        result[name] = entry
+    return result
+
+
 def audit(root, deny_terms=()):
     root = Path(root).resolve()
     try:
         allowed = listed_files(root)
+        assets = reviewed_assets(root, allowed)
     except (ValueError, OSError) as exc:
         return [str(exc)]
     failures, found = [], set()
@@ -63,6 +93,14 @@ def audit(root, deny_terms=()):
             failures.append(f"{name}: outside the reviewed allowlist")
             continue
         data = path.read_bytes()
+        if name in assets:
+            entry = assets[name]
+            magic = data.startswith(b"\x89PNG\r\n\x1a\n") if entry["kind"] == "png" else data[4:8] == b"ftyp"
+            if not magic or len(data) != entry["size"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
+                failures.append(f"{name}: reviewed artwork bytes/hash mismatch")
+            if any(term.encode("utf-8").lower() in data.lower() for term in deny_terms if term):
+                failures.append(f"{name}: private denylist match")
+            continue
         if len(data) > 128 * 1024 or b"\x00" in data:
             failures.append(f"{name}: oversized or binary content")
             continue
@@ -107,7 +145,7 @@ def main():
         for failure in failures:
             print(failure, file=sys.stderr)
         return 1
-    print(f"PASS: {len(listed_files(args.root))} allowlisted text files; no flagged content or broken local links")
+    print(f"PASS: {len(listed_files(args.root))} reviewed files; no flagged content, changed artwork, or broken local links")
     return 0
 
 

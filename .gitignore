@@ -31,3 +31,10 @@ __pycache__/
 *.jks
 adbkey*
 local.properties
+.signing-password
+signing/
+launcher/build/
+launcher/toolchain/
+# Reviewed, generated artwork only. No phone captures or arbitrary media.
+!launcher/app/src/main/res/raw/neural.mp4
+!launcher/app/src/main/res/drawable-nodpi/neural_poster.png

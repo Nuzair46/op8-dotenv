@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "launcher/app/src/main/res/raw/neural.mp4",
+      "kind": "mp4",
+      "size": 7813853,
+      "sha256": "4ee78281bcb92a1474f0f959ad0db0ee1ac366e53a99acbe44fea707bca8b024"
+    },
+    {
+      "path": "launcher/app/src/main/res/drawable-nodpi/neural_poster.png",
+      "kind": "png",
+      "size": 176240,
+      "sha256": "001c679b3ea52d00d58ce1d7ba533d831f27b48f0958b8d8d06da452d2e9a690"
+    }
+  ]
+}
